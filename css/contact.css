@@ -1,0 +1,131 @@
+@font-face {
+  font-family: 'Public Sans', 'Arial', sans-serif;
+  src: url('../fonts/PublicSans-Regular.woff2') format('woff2'),
+      url('../fonts/PublicSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ibarra Real Nova", "Arial", sans-serif;
+  src: url("../fonts/IbarraRealNova-Bold.woff2") format('woff2'),
+      url("../fonts/IbarraRealNova-Bold.woff") format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+html{
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  background-color: #FAFAFA;
+  font-family: 'Public Sans', sans-serif;
+  /* font-family: 'Ibarra Real Nova', serif; */
+}
+
+.container{
+  width: 100%;
+  max-width: 1110px;
+  padding-left: 32px;
+  padding-right: 32px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* HEADER */
+
+.header{
+  position: relative;
+  padding-top: 32px;
+}
+
+.header-content--wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header__toggler{
+  border: none;
+  background-color: transparent;
+  width: 24px;
+  height: 13px;
+  background-image: url(../img/burger.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.header-open .site-header__toggler{
+  background-image: url(../img/closer.svg);
+  width: 18px;
+  height: 18px;
+}
+
+.site-nav{
+  position: absolute;
+  z-index: 5;
+  display: none;
+  right: 0;
+  top: 88px;
+  width: 223px;
+  background-color: #33323D;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.header-open .site-nav{
+  display: block;
+}
+
+.site-nav__list{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav__item:not(:last-child){
+  margin-bottom: 32px;
+}
+
+.site-nav__link{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.link{
+  transition: opacity 0.3s ease;
+}
+
+.link:hover{
+  opacity: 0.7;
+}
