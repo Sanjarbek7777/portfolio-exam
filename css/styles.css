@@ -42,6 +42,8 @@ html{
 body{
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
   background-color: #FAFAFA;
   font-family: 'Public Sans', sans-serif;
   /* font-family: 'Ibarra Real Nova', serif; */
